@@ -66,6 +66,16 @@ button {
   position: relative;
 }
 
+.signature {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  font-size: 14px;
+  color: white;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
 #secondPage {
   display: none;
   background: linear-gradient(135deg, #ff758c, #ff7eb3);
