@@ -8,97 +8,170 @@
 body {
   height: 100vh;
   overflow: hidden;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+
+  background: linear-gradient(
+    135deg,
+    #ff9a9e,
+    #fad0c4
+  );
 }
 
 .page {
   width: 100%;
   height: 100vh;
+
   display: flex;
   flex-direction: column;
+
   justify-content: center;
   align-items: center;
+
   text-align: center;
+
   padding: 20px;
 }
 
 h1 {
   color: white;
+
   font-size: 45px;
+
   margin-bottom: 20px;
 }
 
 p {
   color: white;
+
   font-size: 22px;
+
   margin-bottom: 35px;
 }
 
 .buttons {
   display: flex;
+
   gap: 20px;
+
   justify-content: center;
   align-items: center;
 }
 
 button {
   padding: 15px 35px;
+
   border: none;
+
   border-radius: 30px;
+
   font-size: 20px;
+
   cursor: pointer;
+
   transition: 0.3s;
 }
 
+
+/* YES button */
+
 #yesBtn {
   background: #ff4b6e;
+
   color: white;
 }
 
 #yesBtn:hover {
   transform: scale(1.1);
+
   background: #ff214f;
 }
 
+
+/* NO button */
+
 #noBtn {
   background: white;
+
   color: #ff4b6e;
+
   position: relative;
 }
 
-.signature {
-  position: fixed;
-  bottom: 15px;
-  right: 20px;
-  font-size: 14px;
-  color: white;
-  opacity: 0.8;
-  font-weight: 500;
-}
+
+/* Second page */
 
 #secondPage {
   display: none;
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+
+  background: linear-gradient(
+    135deg,
+    #ff758c,
+    #ff7eb3
+  );
 }
+
+
+/* Heart */
 
 .heart {
   font-size: 100px;
+
   animation: heartbeat 1s infinite;
 }
 
 .message {
   max-width: 600px;
+
   line-height: 1.6;
+
   font-size: 25px;
 }
 
+
+/* Heart animation */
+
 @keyframes heartbeat {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
+
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
 }
 
+
+/* Name at bottom-right */
+
+.signature {
+  position: fixed;
+
+  bottom: 15px;
+  right: 20px;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  opacity: 0.85;
+
+  z-index: 999;
+}
+
+
+/* Mobile */
+
 @media (max-width: 600px) {
+
   h1 {
     font-size: 32px;
   }
@@ -109,6 +182,19 @@ button {
 
   button {
     padding: 12px 25px;
+
     font-size: 17px;
   }
+
+  .heart {
+    font-size: 80px;
+  }
+
+  .signature {
+    bottom: 10px;
+    right: 12px;
+
+    font-size: 12px;
+  }
+
 }
